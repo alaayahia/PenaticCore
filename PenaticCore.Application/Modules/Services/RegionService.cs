@@ -24,8 +24,8 @@ namespace PenaticCore.Application.Modules.Services
 
         public async Task<IEnumerable<RegionDTO>> GetRegionByEmirate(string emirateId)
         {
-            var AcctYears = await _repository.WhereAsync(s => s.EmirateId == emirateId);
-            var mappedResult = AcctYears.Select(_mapper.Map<RegionDTO>).ToList();
+            var result = await _repository.WhereAsync(s => s.EmirateId == emirateId);
+            var mappedResult = result.Select(_mapper.Map<RegionDTO>).ToList();
             return mappedResult;
         }
     }
