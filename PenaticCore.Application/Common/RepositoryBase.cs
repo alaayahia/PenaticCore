@@ -11,12 +11,10 @@ namespace PenaticCore.Application.Common
     public interface IRepositoryBase<T> where T : EntityBase
     {
         Task<T> AddAsync(T item);
-        
         Task<IList<T>> GetAllAsync(Expression<Func<T, bool>> predicate);
-
-         
         Task<T> SingleOrDefaultAsync(Expression<Func<T, bool>> predicate);
-        
+       
+        Task<IEnumerable<T>> WhereAsync(Expression<Func<T, bool>> predicate, params string[] includeProperties);
         IQueryable<T> TQueryable { get; set; }
 
     }
@@ -57,33 +55,36 @@ namespace PenaticCore.Application.Common
             await _context.SaveChangesAsync();
             return item;
         }
-
-         
-
-      
-
         public virtual async Task<IList<T>> GetAllAsync(Expression<Func<T, bool>> predicate)
         {
             return await TQueryable.Where(predicate).ToListAsync();
 
         }
-
-       
-
         public async Task<T> SingleOrDefaultAsync(Expression<Func<T, bool>> predicate)
         {
             return await _tqueryable.SingleOrDefaultAsync(predicate);
 
         }
+        public async Task<IEnumerable<T>> WhereAsync(Expression<Func<T, bool>> predicate, params string[] includeProperties)
+        {
+            IQueryable<T> query = _context.Set<T>().IgnoreAutoIncludes();
 
-        
+            foreach (var includeProperty in includeProperties)
+            {
+                query = query.Include(includeProperty);
+            }
 
-    
+            return await query.Where(predicate).ToListAsync();
+        }
 
 
- 
 
-   
- 
+
+
+
+
+
+
+
     }
 }
