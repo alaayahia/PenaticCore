@@ -1,6 +1,11 @@
 ﻿namespace PenaticCore.Domain.Helpers
 {
-    public class Enum
+    public enum ShipmentServiceType
     {
+        Domestic,
+    }
+    public enum ShipmentType
+    {
+        All,
     }
 }

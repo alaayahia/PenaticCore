@@ -9,6 +9,9 @@ namespace PenaticCore.Infrastructure.Data
 
         public DbSet<Emirate> Emirates { get; set; }
         public DbSet<Region> Regions { get; set; }
+        public DbSet<ShipmentService> ShipmentServices { get; set; }
+        public DbSet<ShipmentDetail> ShipmentDetails { get; set; }
+        public DbSet<ShipmentRate> ShipmentRates { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

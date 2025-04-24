@@ -14,6 +14,18 @@ namespace PenaticCore.Application.Modules.Helpers
 
             CreateMap<Region, RegionDTO>().ReverseMap();
             CreateMap<Region, RegionRequestDTO>().ReverseMap();
+
+            CreateMap<ShipmentDetail, ShipmentDetailDTO>().ReverseMap();
+            CreateMap<ShipmentDetail, ShipmentDetailRequestDTO>().ReverseMap();
+
+            CreateMap<ShipmentRate, ShipmentRateDTO>().ReverseMap();
+            CreateMap<ShipmentRate, ShipmentRateRequestDTO>().ReverseMap();
+
+
+            CreateMap<ShipmentService, ShipmentServiceDTO>().ReverseMap();
+            CreateMap<ShipmentService, ShipmentServiceRequestDTO>().ReverseMap();
+
+
         }
             
 

@@ -15,6 +15,9 @@ namespace PenaticCore.Application.Helpers
             services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             services.AddScoped<IEmirateService, EmirateService>();
             services.AddScoped<IRegionService, RegionService>();
+            services.AddScoped<IShipmentServiceService, ShipmentServiceService>();
+            services.AddScoped<IShipmentDetailService, ShipmentDetailService>();
+            services.AddScoped<IShipmentRateService, ShipmentRateService>();
             return services;
         }
 
