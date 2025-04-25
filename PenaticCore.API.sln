@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PenaticCore.API", "PenaticCore.API\PenaticCore.API.csproj", "{6F1B68F5-F89E-4BA5-8FC9-D4A10BE39067}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PenaticCore.API", "PenaticCore.API\PenaticCore.API.csproj", "{6F1B68F5-F89E-4BA5-8FC9-D4A10BE39067}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PenaticCore.Application", "PenaticCore.Application\PenaticCore.Application.csproj", "{88C2C762-F868-4273-8EA6-45809F59167A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PenaticCore.Application", "PenaticCore.Application\PenaticCore.Application.csproj", "{88C2C762-F868-4273-8EA6-45809F59167A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PenaticCore.Domain", "PenaticCore.Domain\PenaticCore.Domain.csproj", "{4FF65C52-06F3-4AA2-AA50-C7FB238F3C21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PenaticCore.Domain", "PenaticCore.Domain\PenaticCore.Domain.csproj", "{4FF65C52-06F3-4AA2-AA50-C7FB238F3C21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PenaticCore.Infrastructure", "PenaticCore.Infrastructure\PenaticCore.Infrastructure.csproj", "{2A9F2AF5-14D7-430B-97EF-F868B308CF9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PenaticCore.Infrastructure", "PenaticCore.Infrastructure\PenaticCore.Infrastructure.csproj", "{2A9F2AF5-14D7-430B-97EF-F868B308CF9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PenaticCore.Tests", "PenaticCore.Tests\PenaticCore.Tests.csproj", "{3E0B56AB-EE02-49A9-979E-A5157DD3C6D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2A9F2AF5-14D7-430B-97EF-F868B308CF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A9F2AF5-14D7-430B-97EF-F868B308CF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A9F2AF5-14D7-430B-97EF-F868B308CF9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E0B56AB-EE02-49A9-979E-A5157DD3C6D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E0B56AB-EE02-49A9-979E-A5157DD3C6D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E0B56AB-EE02-49A9-979E-A5157DD3C6D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E0B56AB-EE02-49A9-979E-A5157DD3C6D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
