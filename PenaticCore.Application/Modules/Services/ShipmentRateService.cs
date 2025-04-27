@@ -3,6 +3,7 @@ using PenaticCore.Application.Common;
 using PenaticCore.Application.Modules.DTO.RequestDTO;
 using PenaticCore.Application.Modules.DTO;
 using PenaticCore.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace PenaticCore.Application.Modules.Services
 {
@@ -12,7 +13,11 @@ namespace PenaticCore.Application.Modules.Services
 
     public class ShipmentRateService : ServiceBase<ShipmentRate, ShipmentRateDTO, ShipmentRateRequestDTO>, IShipmentRateService
     {
-        public ShipmentRateService(IMapper mapper, IRepositoryBase<ShipmentRate> repository) : base(mapper, repository) { }
+        public ShipmentRateService(IMapper mapper, IRepositoryBase<ShipmentRate> repository) : base(mapper, repository) {
+            repository.TQueryable = repository.TQueryable
+                  .Include(c => c.ShipmentService)
+                  ;
+        }
 
     }
 }

@@ -11,4 +11,8 @@
     <PackageReference Include="NUnit" Version="4.3.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PenaticCore.Application\PenaticCore.Application.csproj" />
+  </ItemGroup>
+
 </Project>
